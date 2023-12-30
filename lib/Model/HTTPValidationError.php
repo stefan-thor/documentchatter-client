@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  DocumentChatter\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace DocumentChatter\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \DocumentChatter\Client\ObjectSerializer;
 
 /**
  * HTTPValidationError Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  DocumentChatter\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -56,7 +56,7 @@ class HTTPValidationError implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'detail' => '\Swagger\Client\Model\ValidationError[]'
+        'detail' => '\DocumentChatter\Client\Model\ValidationError[]'
     ];
 
     /**
@@ -204,7 +204,7 @@ class HTTPValidationError implements ModelInterface, ArrayAccess
     /**
      * Gets detail
      *
-     * @return \Swagger\Client\Model\ValidationError[]
+     * @return \DocumentChatter\Client\Model\ValidationError[]
      */
     public function getDetail()
     {
@@ -214,7 +214,7 @@ class HTTPValidationError implements ModelInterface, ArrayAccess
     /**
      * Sets detail
      *
-     * @param \Swagger\Client\Model\ValidationError[] $detail detail
+     * @param \DocumentChatter\Client\Model\ValidationError[] $detail detail
      *
      * @return $this
      */

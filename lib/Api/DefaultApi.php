@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  DocumentChatter\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace DocumentChatter\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use DocumentChatter\Client\ApiException;
+use DocumentChatter\Client\Configuration;
+use DocumentChatter\Client\HeaderSelector;
+use DocumentChatter\Client\ObjectSerializer;
 
 /**
  * DefaultApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  DocumentChatter\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -91,9 +91,9 @@ class DefaultApi
      *
      * Add Document
      *
-     * @param  \Swagger\Client\Model\DocumentRequestSchema $body body (required)
+     * @param  \DocumentChatter\Client\Model\DocumentRequestSchema $body body (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \DocumentChatter\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -107,9 +107,9 @@ class DefaultApi
      *
      * Add Document
      *
-     * @param  \Swagger\Client\Model\DocumentRequestSchema $body (required)
+     * @param  \DocumentChatter\Client\Model\DocumentRequestSchema $body (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \DocumentChatter\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -153,7 +153,7 @@ class DefaultApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\HTTPValidationError',
+                        '\DocumentChatter\Client\Model\HTTPValidationError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -168,7 +168,7 @@ class DefaultApi
      *
      * Add Document
      *
-     * @param  \Swagger\Client\Model\DocumentRequestSchema $body (required)
+     * @param  \DocumentChatter\Client\Model\DocumentRequestSchema $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -188,7 +188,7 @@ class DefaultApi
      *
      * Add Document
      *
-     * @param  \Swagger\Client\Model\DocumentRequestSchema $body (required)
+     * @param  \DocumentChatter\Client\Model\DocumentRequestSchema $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -224,7 +224,7 @@ class DefaultApi
     /**
      * Create request for operation 'addDocumentDocumentPost'
      *
-     * @param  \Swagger\Client\Model\DocumentRequestSchema $body (required)
+     * @param  \DocumentChatter\Client\Model\DocumentRequestSchema $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -324,11 +324,11 @@ class DefaultApi
      *
      * Add Index
      *
-     * @param  \Swagger\Client\Model\IndexSchema $body body (required)
+     * @param  \DocumentChatter\Client\Model\IndexSchema $body body (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \DocumentChatter\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\IndexResponseSchema
+     * @return \DocumentChatter\Client\Model\IndexResponseSchema
      */
     public function addIndexIndexPost($body)
     {
@@ -341,15 +341,15 @@ class DefaultApi
      *
      * Add Index
      *
-     * @param  \Swagger\Client\Model\IndexSchema $body (required)
+     * @param  \DocumentChatter\Client\Model\IndexSchema $body (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \DocumentChatter\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\IndexResponseSchema, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \DocumentChatter\Client\Model\IndexResponseSchema, HTTP status code, HTTP response headers (array of strings)
      */
     public function addIndexIndexPostWithHttpInfo($body)
     {
-        $returnType = '\Swagger\Client\Model\IndexResponseSchema';
+        $returnType = '\DocumentChatter\Client\Model\IndexResponseSchema';
         $request = $this->addIndexIndexPostRequest($body);
 
         try {
@@ -401,7 +401,7 @@ class DefaultApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\IndexResponseSchema',
+                        '\DocumentChatter\Client\Model\IndexResponseSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -409,7 +409,7 @@ class DefaultApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\HTTPValidationError',
+                        '\DocumentChatter\Client\Model\HTTPValidationError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -424,7 +424,7 @@ class DefaultApi
      *
      * Add Index
      *
-     * @param  \Swagger\Client\Model\IndexSchema $body (required)
+     * @param  \DocumentChatter\Client\Model\IndexSchema $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -444,14 +444,14 @@ class DefaultApi
      *
      * Add Index
      *
-     * @param  \Swagger\Client\Model\IndexSchema $body (required)
+     * @param  \DocumentChatter\Client\Model\IndexSchema $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function addIndexIndexPostAsyncWithHttpInfo($body)
     {
-        $returnType = '\Swagger\Client\Model\IndexResponseSchema';
+        $returnType = '\DocumentChatter\Client\Model\IndexResponseSchema';
         $request = $this->addIndexIndexPostRequest($body);
 
         return $this->client
@@ -494,7 +494,7 @@ class DefaultApi
     /**
      * Create request for operation 'addIndexIndexPost'
      *
-     * @param  \Swagger\Client\Model\IndexSchema $body (required)
+     * @param  \DocumentChatter\Client\Model\IndexSchema $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -594,11 +594,11 @@ class DefaultApi
      *
      * Ask Document
      *
-     * @param  \Swagger\Client\Model\QuestionSchema $body body (required)
+     * @param  \DocumentChatter\Client\Model\QuestionSchema $body body (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \DocumentChatter\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\QuestionSchema
+     * @return \DocumentChatter\Client\Model\QuestionSchema
      */
     public function askDocumentAskPost($body)
     {
@@ -611,15 +611,15 @@ class DefaultApi
      *
      * Ask Document
      *
-     * @param  \Swagger\Client\Model\QuestionSchema $body (required)
+     * @param  \DocumentChatter\Client\Model\QuestionSchema $body (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \DocumentChatter\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\QuestionSchema, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \DocumentChatter\Client\Model\QuestionSchema, HTTP status code, HTTP response headers (array of strings)
      */
     public function askDocumentAskPostWithHttpInfo($body)
     {
-        $returnType = '\Swagger\Client\Model\QuestionSchema';
+        $returnType = '\DocumentChatter\Client\Model\QuestionSchema';
         $request = $this->askDocumentAskPostRequest($body);
 
         try {
@@ -671,7 +671,7 @@ class DefaultApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\QuestionSchema',
+                        '\DocumentChatter\Client\Model\QuestionSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -679,7 +679,7 @@ class DefaultApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\HTTPValidationError',
+                        '\DocumentChatter\Client\Model\HTTPValidationError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -694,7 +694,7 @@ class DefaultApi
      *
      * Ask Document
      *
-     * @param  \Swagger\Client\Model\QuestionSchema $body (required)
+     * @param  \DocumentChatter\Client\Model\QuestionSchema $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -714,14 +714,14 @@ class DefaultApi
      *
      * Ask Document
      *
-     * @param  \Swagger\Client\Model\QuestionSchema $body (required)
+     * @param  \DocumentChatter\Client\Model\QuestionSchema $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function askDocumentAskPostAsyncWithHttpInfo($body)
     {
-        $returnType = '\Swagger\Client\Model\QuestionSchema';
+        $returnType = '\DocumentChatter\Client\Model\QuestionSchema';
         $request = $this->askDocumentAskPostRequest($body);
 
         return $this->client
@@ -764,7 +764,7 @@ class DefaultApi
     /**
      * Create request for operation 'askDocumentAskPost'
      *
-     * @param  \Swagger\Client\Model\QuestionSchema $body (required)
+     * @param  \DocumentChatter\Client\Model\QuestionSchema $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -864,11 +864,11 @@ class DefaultApi
      *
      * Ask Document
      *
-     * @param  \Swagger\Client\Model\MCQSchema $body body (required)
+     * @param  \DocumentChatter\Client\Model\MCQSchema $body body (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \DocumentChatter\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\MCQSchema
+     * @return \DocumentChatter\Client\Model\MCQSchema
      */
     public function askDocumentMcqPost($body)
     {
@@ -881,15 +881,15 @@ class DefaultApi
      *
      * Ask Document
      *
-     * @param  \Swagger\Client\Model\MCQSchema $body (required)
+     * @param  \DocumentChatter\Client\Model\MCQSchema $body (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \DocumentChatter\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\MCQSchema, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \DocumentChatter\Client\Model\MCQSchema, HTTP status code, HTTP response headers (array of strings)
      */
     public function askDocumentMcqPostWithHttpInfo($body)
     {
-        $returnType = '\Swagger\Client\Model\MCQSchema';
+        $returnType = '\DocumentChatter\Client\Model\MCQSchema';
         $request = $this->askDocumentMcqPostRequest($body);
 
         try {
@@ -941,7 +941,7 @@ class DefaultApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MCQSchema',
+                        '\DocumentChatter\Client\Model\MCQSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -949,7 +949,7 @@ class DefaultApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\HTTPValidationError',
+                        '\DocumentChatter\Client\Model\HTTPValidationError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -964,7 +964,7 @@ class DefaultApi
      *
      * Ask Document
      *
-     * @param  \Swagger\Client\Model\MCQSchema $body (required)
+     * @param  \DocumentChatter\Client\Model\MCQSchema $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -984,14 +984,14 @@ class DefaultApi
      *
      * Ask Document
      *
-     * @param  \Swagger\Client\Model\MCQSchema $body (required)
+     * @param  \DocumentChatter\Client\Model\MCQSchema $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function askDocumentMcqPostAsyncWithHttpInfo($body)
     {
-        $returnType = '\Swagger\Client\Model\MCQSchema';
+        $returnType = '\DocumentChatter\Client\Model\MCQSchema';
         $request = $this->askDocumentMcqPostRequest($body);
 
         return $this->client
@@ -1034,7 +1034,7 @@ class DefaultApi
     /**
      * Create request for operation 'askDocumentMcqPost'
      *
-     * @param  \Swagger\Client\Model\MCQSchema $body (required)
+     * @param  \DocumentChatter\Client\Model\MCQSchema $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
